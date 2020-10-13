@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Qatar 2022</title>
+    </head>
+
+    <body>
+
+    	<style>
+
+    		body {
+    			background-color: blue;
+    		}
+
+    		h1 {
+    			text-align: center;
+    			font-size: 60px;
+    			font-weight: 900;
+    			color: white;
+    		}
+
+    		p {
+    			text-align: center;
+    			color: white;
+    			font-size: 50px;
+    		}
+
+    		form {
+    			text-align: center;
+    			color: white;
+    		}
+
+    		input {
+    			width: 500px;
+    		}
+
+    		select {
+    			width: 500px;
+    		}
+
+    		.radio {
+    			width: 10px;
+    			position: absolute;
+    			left: 400px;
+    		}
+
+    		.jugadores {
+    			font-size: 20px;
+    			position: absolute;
+    			left: 420px;
+    		}
+
+    		.checkbox {
+				width: 10px;
+    			position: absolute;
+    			left: 400px;
+    		}
+
+    		.opciones {
+    			font-size: 20px;
+    			position: absolute;
+    			left: 420px;
+    		}
+
+    		#textarea {
+    			position: absolute;
+    			left: 450px;
+    		}
+
+    		label {
+    			font-size: 30px;
+    		}
+
+    		#submit {
+    			position: absolute;
+    			top: 180%;
+    			left: 650px;
+    			width: 55px;
+    			cursor: pointer;
+    		}
+
+    	</style>
+
+    	<h1 id=title>Selección Argentina rumbo a Qatar 2022</h1>
+    	<p id="description">¿Cómo le irá a la Selección en las Eliminatorias?</p>
+
+    	<form id="survey-form">
+    		<label id="name-label" for="nombre">Nombre</label><br>
+    		<input type="text" id="name" name="name" placeholder="Nombre" required="true"><br><br>
+ 			<label id="email-label" for="email">Email</label><br>
+    		<input type="email" id="email" name="email" placeholder="Email" required="true"><br><br>
+    		<label id="number-label" for="edad">Edad (opcional)</label><br>
+ 			<input type="number" id="number" name="number" placeholder="Edad" min="5" max="99"><br><br>
+
+ 			<label for="posicion">¿En que puesto quedará la Selección al finalizar las Eliminatorias?</label><br><br>
+ 			<select id="dropdown" name="posicion">
+ 				<option disabled selected value> -- Elegí una opción -- </option>
+ 				<option value="1ero">Primero</option>
+    			<option value="2do">Segundo</option>
+			    <option value="3ero">Tercero</option>
+			    <option value="4to">Cuarto</option>
+			    <option value="5to">Quinto</option>
+			    <option value="6to">Sexto</option>
+			    <option value="7mo">Séptimo</option>
+			    <option value="8vo">Octavo</option>
+			    <option value="9vn">Noveno</option>
+			    <option value="10mo">Décimo</option>
+			</select><br><br>
+
+			<label for="goleador">¿Quién será el goleador de nuestra Selección?</label><br><br>
+			<input class="radio" type="radio" name="attribute" value="attribute">
+			<label class="jugadores" for="Messi">Messi</label><br>
+			<input class="radio" type="radio" name="attribute" value="attribute">
+			<label class="jugadores" for="Martinez">Lautaro Martinez</label><br>
+			<input class="radio" type="radio" name="attribute" value="attribute">
+			<label class="jugadores" for="Agüero">Kun Agüero</label><br>
+			<input class="radio" type="radio" name="attribute" value="attribute">
+			<label class="jugadores" for="Ocampos">Lucas Ocampos</label><br>
+			<input class="radio" type="radio" name="attribute" value="attribute">
+			<label class="jugadores" for="Otro">Otro</label><br><br>
+
+			<label for="tecnico">¿Estás de acuerdo con que Scaloni sea el DT?</label><br><br>
+			<input class="checkbox" type="checkbox" name="si" value="attribute">
+		    <label class="opciones" for="si">Si</label><br>
+		    <input class="checkbox" type="checkbox" name="no" value="attribute">
+		    <label class="opciones" for="no">No. Hay mejores opciones</label><br>
+		    <input class="checkbox" type="checkbox" name="no pero" value="attribute">
+		    <label class="opciones" for="no pero">No. Pero si ya fue elegido, que permanezca en el cargo</label><br><br><br>
+
+		    <label for="opinion">Dejá tu opinión sobre los jugadores convocados, el nivel mostrado<br> en el primer partido, si creés que algún nombre faltó en la lista de<br>Scaloni o cualquier comentario que quieras agregar.</label><br><br><br>
+		    <textarea id="textarea" name="opinion" rows="6" cols="60"></textarea><br><br>
+  			<input id="submit" type="submit" value="Enviar">
+		</form> 
+
+    	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    	<script>
+
+    		$(document).ready(function(){
+    			$('.checkbox').click(function() {
+    				$('.checkbox').not(this).prop('checked', false);
+    			});
+    		});
+		</script>
+
+	</body>
+</html>
